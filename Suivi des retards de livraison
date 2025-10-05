@@ -1,0 +1,7 @@
+SELECT 
+    region,
+    COUNT(*) AS nb_livraisons,
+    AVG(delay_days) AS delai_moyen
+FROM Transport
+GROUP BY region
+ORDER BY delai_moyen DESC;
