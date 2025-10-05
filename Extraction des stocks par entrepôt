@@ -1,0 +1,6 @@
+SELECT 
+    warehouse,
+    SUM(stock_qty) AS total_stock
+FROM Stocks
+GROUP BY warehouse
+ORDER BY total_stock DESC;
