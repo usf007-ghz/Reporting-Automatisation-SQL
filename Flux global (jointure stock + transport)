@@ -1,1 +1,10 @@
+SELECT 
+    s.product_name,
+    s.warehouse,
+    t.region,
+    SUM(t.quantity) AS total_expedie,
+    s.stock_qty
+FROM Stocks s
+JOIN Transport t ON s.product_id = t.product_id
+GROUP BY s.product_name, s.warehouse, t.region;
 
